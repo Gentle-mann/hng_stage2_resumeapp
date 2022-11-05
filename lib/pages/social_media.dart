@@ -10,7 +10,6 @@ class SocialMediaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final isMobile = width < 760;
-    final crossAxisCount = isMobile ? 2 : 4;
     final mediaItems = mediaButtons();
     return Scaffold(
       appBar: AppBar(
@@ -64,7 +63,7 @@ class SocialMediaPage extends StatelessWidget {
 
   Future<void> _launchUrl(url) async {
     if (await canLaunchUrl(url)) {
-      await launchUrl(url, mode: LaunchMode.externalApplication);
+      await launchUrl(url);
     } else {
       throw 'Could not Launch';
     }

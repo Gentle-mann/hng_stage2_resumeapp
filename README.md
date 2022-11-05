@@ -33,3 +33,4 @@ I have not build a resume app before. So, at first, I did not have any idea how 
 The rest was just smooth-sailing to be honest.
 
 Appetize.io link
+https://appetize.io/app/jix4x6iehz4l67q77ytf4duswm?device=pixel4&osVersion=11.0&scale=75
