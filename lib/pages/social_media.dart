@@ -19,15 +19,20 @@ class SocialMediaPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: SingleChildScrollView(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ...mediaItems.map(
-                (mediaButton) => _buildMediaItems(mediaButton),
-              ),
-            ],
-          )),
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              return SingleChildScrollView(
+                scrollDirection: constraints.maxWidth < 760 ? Axis.vertical : Axis.horizontal,
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...mediaItems.map(
+                    (mediaButton) => _buildMediaItems(mediaButton),
+                  ),
+                ],
+              ),);
+            }
+          ),
         ),
       ),
     );
@@ -46,7 +51,7 @@ class SocialMediaPage extends StatelessWidget {
           const SizedBox(height: 12.0),
           Text(
             mediaButton.title,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 24.0,
             ),

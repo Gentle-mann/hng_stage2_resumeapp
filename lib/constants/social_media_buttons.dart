@@ -3,7 +3,7 @@ import 'package:hng_stage2_mobile/models/social_media_button.dart';
 List<SocialMediaButton> mediaButtons() {
   final mediaItems = [
     SocialMediaButton(
-      image: 'assets/images/twitter.jpeg',
+      image: 'assets/images/twitter.png',
       title: 'Twitter',
       url: Uri.parse(
           'https://twitter.com/Ishaq_gentle_ma?t=lnbecQekueVMuzVUYSYYcQ&s=08'),
